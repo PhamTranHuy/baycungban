@@ -1,17 +1,27 @@
 function FlightTimeAndPlace() {
     return (
-        <div className="flex-center">
+        <div className="flex-center py-5">
             <div className="flex-center grow">
-                <div>
-                    <div>From</div>
-                    <div>Da Nang</div>
-                    <div>Quang Nam, Viet Nam</div>
+                <div className="grow py-4 px-5 rounded-2xl
+                    border-transparent border-2 
+                    font-bold text-left
+                    hover:border-[#4D46FA]">
+                    <div className="text-xs text-[#040404b3]">FROM</div>
+                    <div className="my-1 text-2xl text-[#4D46FA]">Da Nang</div>
+                    <div className="text-sm text-[#000]">Quang Nam, Viet Nam</div>
                 </div>
-                <div>arrow icon</div>
-                <div>
-                    <div>To</div>
-                    <div>Ho Chi Minh</div>
-                    <div>Viet Nam</div>
+                {/* <div className="flex-center w-[60px] h-[60px] rounded-full"> */}
+                <div className="mx-2">
+                    <img className="mr-[5px] mb-[-1px]" src={process.env.PUBLIC_URL + '/assets/home/left-arrow.svg'} alt="" />
+                    <img className="ml-[5px] mt-[-1px]" src={process.env.PUBLIC_URL + '/assets/home/right-arrow.svg'} alt="" />
+                </div>
+                {/* </div> */}
+                <div className="grow py-4 px-5 rounded-2xl border-transparent border-2 
+                    font-bold text-left
+                    hover:border-[#4D46FA]">
+                    <div className="text-xs text-[#040404b3]">TO</div>
+                    <div className="my-1 text-2xl text-[#4D46FA]">Ho Chi Minh</div>
+                    <div className="text-sm text-[#000]">Viet Nam</div>
                 </div>
             </div>
             <div className="flex-center grow">
