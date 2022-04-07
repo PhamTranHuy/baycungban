@@ -2,7 +2,7 @@ import NavigationBar from './NavigationBar'
 
 function Header() {
     return (
-        <div className="fixed flex justify-evenly w-full py-10">
+        <div className="fixed flex justify-between w-full py-10 px-48">
             <div className="flex text-2xl leading-10 font-bold">
                 <h3>Baycungban</h3>
                 <div className="flex justify-center items-center">
