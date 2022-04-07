@@ -1,20 +1,11 @@
-import FlightTypesRadioForm from "./FlightTypesRadioForm/FlightTypesRadioForm"
+import FlightOptionBar from "./FlightOptionBar/FlightOptionBar"
+import FlightTimeAndPlace from "./FlightTimeAndPlace/FlightTimeAndPlace"
 
 function SearchFlights() {
     return (
-        <div className="mt-40 px-12 pt-6 pb-12 bg-white rounded-xl">
-            <div className="flex items-center text-sm font-bold whitespace-pre">
-                <FlightTypesRadioForm />
-                <div className="mr-12 flex">
-                    <span>02</span> Adult,
-                    <span> 01</span> Children
-                    <img className="ml-1" src={process.env.PUBLIC_URL + '/assets/home/down-arrow-svg.svg'} alt="" />
-                </div>
-                <div className="flex">
-                    <p>Business Class</p>
-                    <img className="ml-1" src={process.env.PUBLIC_URL + '/assets/home/down-arrow-svg.svg'} alt="" />
-                </div>
-            </div>
+        <div className="mt-40 px-8 pt-8 pb-12 bg-white rounded-xl">
+            <FlightOptionBar />
+            <FlightTimeAndPlace />
         </div>
     )
 }
