@@ -2,7 +2,12 @@ import React from 'react'
 
 function NavigationBar() {
   return (
-    <div>NavigationBar</div>
+    <div className="flex justify-between items-center font-semibold">
+        <div className="mx-4">Promotion</div>
+        <div className="mx-4">Flight Schedule</div>
+        <div className="mx-4">About us</div>
+        <div className="mx-4">Payment Guide</div>
+    </div>
   )
 }
 
