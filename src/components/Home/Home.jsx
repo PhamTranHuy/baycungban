@@ -1,3 +1,4 @@
+import SearchFlights from "./SearchFlights/SearchFlights"
 
 function Home() {
     return (
@@ -12,6 +13,7 @@ function Home() {
                     you <span className="text-[#4D46FA] font-semibold">flying</span> to ...
                 </h1>
             </div>
+            <SearchFlights />
         </div>
     )
 }
