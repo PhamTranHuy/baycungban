@@ -9,7 +9,7 @@ function Home() {
                 <h1 className="a">Hello!</h1>
                 <h1 className="a">Where are</h1>
                 <h1 className="a">
-                    you <span className="text-[#4D46FA]">flying</span> to ...
+                    you <span className="text-[#4D46FA] font-semibold">flying</span> to ...
                 </h1>
             </div>
         </div>
