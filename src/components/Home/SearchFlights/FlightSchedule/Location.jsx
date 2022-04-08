@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Location() {
     return (
         <div className="flex-center grow basis-1/2 h-[100px] mr-3">
