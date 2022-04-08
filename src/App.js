@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Navigate to="home" replace={true} />} />
+        <Route path="/*" element={<Navigate to="home" replace={true} />} />
         <Route path="home" element={<Home />} />
         <Route path="flight-schedule" element={<></>} />
       </Routes>
