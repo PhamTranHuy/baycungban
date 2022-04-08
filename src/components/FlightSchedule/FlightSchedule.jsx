@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import ChangeFlightsBar from './ChangeFlightsBar/ChangeFlightsBar';
+import FlightsInfo from './FlightsInfo/FlightsInfo';
 
 const FLIGHTS_API = "https://mocki.io/v1/ff3207e0-f250-4a1d-9240-b3dbffa8386a";
 function FlightSchedule() {
@@ -18,6 +19,7 @@ function FlightSchedule() {
     return (
         <div className="bg-[#f4f2f9]">
             <ChangeFlightsBar />
+            <FlightsInfo />
         </div>
     )
 }
