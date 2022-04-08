@@ -16,7 +16,7 @@ function Home() {
             </div>
             <SearchFlights />
             <div className="fixed -z-10
-                h-[150px] top-[86%] right-0 left-[300px] 
+                h-[150px] top-[86%] right-0 left-[20%]
                 h-full bg-[#F4F2F9]" />
         </div>
     )

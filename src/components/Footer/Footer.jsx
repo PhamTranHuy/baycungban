@@ -1,8 +1,12 @@
-import React from 'react'
+import clsx from 'clsx'
+import { useLocation } from 'react-router-dom'
 
 function Footer() {
+    const location = useLocation();
     return (
-        <div className="fixed bottom-0 w-full">
+        <div className={clsx("w-full", 
+            location.pathname === '/home' && "fixed bottom-0"
+        )}>
             <div className="flex justify-between 
                 home-max-w m-auto py-10 
                 text-black whitespace-pre tracking-widest text-sm">
