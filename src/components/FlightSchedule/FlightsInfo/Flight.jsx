@@ -1,17 +1,24 @@
 import React from 'react'
 import MiniSchedule from './Flight/MiniSchedule'
 
+const AIRLINES_NAME = {
+    'VJ': 'VIETJET AIR',
+    'VN': 'VIETNAM AIRLINE',
+    'QH': 'BAMBOO AIRWAYS'
+}
 function Flight({ flight }) {
     return (
-        <div className="bg-white rounded-xl p-4">
+        <div className="bg-white rounded-xl p-4 mb-[10px]">
             <div className="flex justify-between items-center text-sm">
-                <div className="flex-center">
+                <div className="flex items-center min-w-[185px]">
                     <div className="w-[30px] h-[30px] flex-center border rounded-md">
-                        <img className="w-5 h-auto" src={process.env.PUBLIC_URL + '/assets/flight-schedule/VJ.png'} alt="" />
+                        <img className="w-5 h-auto" src={process.env.PUBLIC_URL + `/assets/flight-schedule/${flight.AirlineCode}.png`} alt="" />
                     </div>
-                    <div className="ml-3 font-semibold tracking-widest">VIETNAM AIRLINES</div>
+                    <div className="ml-3 font-semibold tracking-widest">{AIRLINES_NAME[flight.AirlineCode]}</div>
                 </div>
-                <MiniSchedule />
+                <MiniSchedule startTime={flight.StartDate} endTime={flight.EndDate} 
+                    startPoint={flight.StartPoint} endPoint={flight.EndPoint}
+                    duration={flight.Duration} />
                 <div>
                     <div className="flex-center mb-2">
                         <img src={process.env.PUBLIC_URL + '/assets/flight-schedule/bag.svg'} alt="" />

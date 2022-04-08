@@ -2,7 +2,6 @@ import Filter from "./Filter"
 import Flight from "./Flight"
 
 function FlightsInfo({ flights }) {
-    console.log(flights);
     return (
         <div className="flex flight-schedule-max-w m-auto">
             <div className="grow">
