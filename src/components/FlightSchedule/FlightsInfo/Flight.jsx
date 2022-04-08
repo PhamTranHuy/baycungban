@@ -1,10 +1,7 @@
 import React from 'react'
 import MiniSchedule from './Flight/MiniSchedule'
 
-const FLIGHT = {
-    AirlineCode: "VJ",
-}
-function Flight() {
+function Flight({ flight }) {
     return (
         <div className="bg-white rounded-xl p-4">
             <div className="flex justify-between items-center text-sm">
@@ -29,11 +26,13 @@ function Flight() {
                     <div className="mb-2 text-grey line-through">1,322,000 vnd</div>
                     <div className="text-[#F06336] font-semibold">1,322,000 vnd</div>
                 </div>
-                <button className="h-fit px-4 py-1 rounded-xl font-semibold text-[#F06336] bg-[#fef0eb]">Choose</button>
+                <button className="h-fit px-4 py-[6px] rounded-xl 
+                font-semibold text-[#F06336] bg-[#fef0eb]
+                hover:text-white hover:bg-[#F06336]">Choose</button>
             </div>
-            <div>
-                <div>FLIGHT DETAIL</div>
-                <div>FARE INFO</div>
+            <div className="flex mt-7 text-xs font-semibold text-grey">
+                <div className="hover:text-purple hover:underline underline-offset-4">FLIGHT DETAIL</div>
+                <div className="ml-7 hover:text-purple hover:underline underline-offset-4">FARE INFO</div>
             </div>
         </div>
     )
