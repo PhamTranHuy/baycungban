@@ -16,13 +16,13 @@ function Flight() {
                 </div>
                 <MiniSchedule />
                 <div>
-                    <div>
-                        <div>icon</div>
-                        <div>Baggage 20kg</div>
+                    <div className="flex-center mb-2">
+                        <img src={process.env.PUBLIC_URL + '/assets/flight-schedule/bag.svg'} alt="" />
+                        <div>Baggage <span className="text-purple font-bold">20kg</span></div>
                     </div>
-                    <div>
-                        <div>icon</div>
-                        <div>In-flight Meal </div>
+                    <div className="flex-center">
+                        <img src={process.env.PUBLIC_URL + '/assets/flight-schedule/meal.svg'} alt="" />
+                        <div>In-flight <span className="text-purple font-bold">Meal</span></div>
                     </div>
                 </div>
                 <div>
