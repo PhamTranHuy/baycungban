@@ -9,7 +9,7 @@ const BUTTONS = [
     }
 ]
 function FlightTypesRadioForm() {
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [activeIndex, setActiveIndex] = useState(0);
     return (
         <div className="flex-center mr-6">
             {BUTTONS.map((button, index) => (
