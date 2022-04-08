@@ -5,8 +5,8 @@ import NavigationBar from './NavigationBar'
 function Header() {
     const location = useLocation();
     return (
-        <div className={clsx("absolute w-full", 
-            location.pathname !== '/home' ? "py-6 bg-[#4D46FA] text-white" : "py-10 bg-transparent text-black")}>
+        <div className={clsx("w-full", 
+            location.pathname !== '/home' ? "py-6 bg-[#4D46FA] text-white" : "absolute py-10 bg-transparent text-black")}>
             <div className="home-max-w m-auto flex justify-between w-full">
                 <div className="flex text-2xl leading-10 font-bold">
                     <NavLink to="/home"><h3>Baycungban</h3></NavLink>
