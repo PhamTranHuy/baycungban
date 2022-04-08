@@ -6,7 +6,8 @@ function Home() {
             backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/home/background-img.png"})`,
             backgroundSize: "100% 82%"
         }}>
-            <div className="home-max-w m-auto pt-[17%] text-left text-7xl font-light">
+            <div className="absolute bottom-1/2 left-[10%] 
+                home-max-w m-auto text-left text-7xl font-light">
                 <h1 className="a">Hello!</h1>
                 <h1 className="a">Where are</h1>
                 <h1 className="a">
