@@ -7,6 +7,16 @@ const AIRLINES_NAME = {
     'QH': 'BAMBOO AIRWAYS'
 }
 function Flight({ flight }) {
+    const getPrice = () => {
+        const formatPrice = (price) => {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        const price = flight.ChargeAdult + flight.ChargeChild + flight.ChargeInfant +
+            flight.FeeAdult + flight.FeeChild + flight.FeeInfant +
+            flight.PriceAdult + flight.PriceChild + flight.PriceInfant +
+            flight.TaxAdult + flight.TaxChild + flight.TaxInfant;
+        return `${formatPrice(Math.round(price/1000)*1000)} vnd`;
+    }
     return (
         <div className="bg-white rounded-xl p-4 mb-[10px]">
             <div className="flex justify-between items-center text-sm">
@@ -22,7 +32,7 @@ function Flight({ flight }) {
                 <div>
                     <div className="flex-center mb-2">
                         <img src={process.env.PUBLIC_URL + '/assets/flight-schedule/bag.svg'} alt="" />
-                        <div className="ml-2">Baggage <span className="text-purple font-semibold">20kg</span></div>
+                        <div className="ml-2">Baggage <span className="text-purple font-semibold">{flight.Freebag}</span></div>
                     </div>
                     <div className="flex-center">
                         <img src={process.env.PUBLIC_URL + '/assets/flight-schedule/meal.svg'} alt="" />
@@ -30,8 +40,8 @@ function Flight({ flight }) {
                     </div>
                 </div>
                 <div>
-                    <div className="mb-2 text-grey line-through">1,322,000 vnd</div>
-                    <div className="text-[#F06336] font-semibold">1,322,000 vnd</div>
+                    {flight.Promo && <div className="mb-2 text-grey line-through">{getPrice()}</div>}
+                    <div className="text-[#F06336] font-semibold">{getPrice()}</div>
                 </div>
                 <button className="h-fit px-4 py-[6px] rounded-xl 
                 font-semibold text-[#F06336] bg-[#fef0eb]
