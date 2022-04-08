@@ -4,7 +4,7 @@ function Home() {
     return (
         <div className="h-screen px-48 bg-no-repeat" style={{
             backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/home/background-img.png"})`,
-            backgroundSize: "100% 85%"
+            backgroundSize: "100% 82%"
         }}>
             <div className="pt-[17%] text-left text-7xl font-light">
                 <h1 className="a">Hello!</h1>

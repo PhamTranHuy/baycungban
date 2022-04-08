@@ -3,7 +3,7 @@ import Location from "./Location"
 
 function FlightSchedule() {
     return (
-        <div className="flex-center py-5">
+        <div className="flex-center pt-5">
             <Location />
             <Date />
         </div>
