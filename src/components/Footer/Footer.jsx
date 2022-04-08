@@ -5,7 +5,7 @@ function Footer() {
     const location = useLocation();
     return (
         <div className={clsx("w-full", 
-            location.pathname === '/home' && "fixed bottom-0"
+            location.pathname === '/home' ? "fixed bottom-0" : "absolute bottom-0" 
         )}>
             <div className="flex justify-between 
                 home-max-w m-auto py-10 

@@ -17,6 +17,7 @@ function Flight({ flight }) {
             flight.TaxAdult + flight.TaxChild + flight.TaxInfant;
         return `${formatPrice(Math.round(price/1000)*1000)} vnd`;
     }
+
     return (
         <div className="bg-white rounded-xl p-4 mb-[10px]">
             <div className="flex justify-between items-center text-sm">
@@ -30,14 +31,16 @@ function Flight({ flight }) {
                     startPoint={flight.StartPoint} endPoint={flight.EndPoint}
                     duration={flight.Duration} />
                 <div>
+                    {flight.Carryon !== '' && 
                     <div className="flex-center mb-2">
                         <img src={process.env.PUBLIC_URL + '/assets/flight-schedule/bag.svg'} alt="" />
-                        <div className="ml-2">Baggage <span className="text-purple font-semibold">{flight.Freebag}</span></div>
-                    </div>
+                        <div className="ml-2">Baggage <span className="text-purple font-semibold">{flight.Carryon}</span></div>
+                    </div>}
+                    {flight.GroupClass === "Business Flex" && 
                     <div className="flex-center">
                         <img src={process.env.PUBLIC_URL + '/assets/flight-schedule/meal.svg'} alt="" />
                         <div className="ml-2">In-flight <span className="text-purple font-semibold">Meal</span></div>
-                    </div>
+                    </div>}
                 </div>
                 <div>
                     {flight.Promo && <div className="mb-2 text-grey line-through">{getPrice()}</div>}

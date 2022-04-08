@@ -19,7 +19,7 @@ function FlightSchedule() {
         getFlights();
     }, [])
     return (
-        <div className="bg-[#f4f2f9]">
+        <div className="bg-[#f4f2f9] pb-[110px]">
             <ChangeFlightsBar />
             <FlightsInfo flights={data} />
         </div>

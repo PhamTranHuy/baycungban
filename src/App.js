@@ -7,7 +7,7 @@ import FlightSchedule from './components/FlightSchedule/FlightSchedule';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App relative">
       <Header></Header>
       <Routes>
         <Route path="/*" element={<Navigate to="home" replace={true} />} />
