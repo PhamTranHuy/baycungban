@@ -6,7 +6,7 @@ const AIRLINES_NAME = {
     'VN': 'VIETNAM AIRLINE',
     'QH': 'BAMBOO AIRWAYS'
 }
-function Flight({ flight }) {
+function Flight({ flight, onChoose }) {
     const getPrice = () => {
         const formatPrice = (price) => {
             return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -48,7 +48,7 @@ function Flight({ flight }) {
                 </div>
                 <button className="h-fit px-4 py-[6px] rounded-xl 
                 font-semibold text-[#F06336] bg-[#fef0eb]
-                hover:text-white hover:bg-[#F06336]">Choose</button>
+                hover:text-white hover:bg-[#F06336]" onClick={() => {onChoose(flight)}}>Choose</button>
             </div>
             <div className="flex mt-7 text-xs font-semibold text-grey">
                 <div className="hover:text-purple hover:underline underline-offset-4">FLIGHT DETAIL</div>

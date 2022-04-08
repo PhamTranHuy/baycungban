@@ -3,7 +3,7 @@ const FILTERS = ['Transit', 'Time', 'Airline', 'Low Price'];
 function Filter() {
     return (
         <div className="flex justify-between items-center 
-            ml-auto mt-4 mb-1 
+            ml-auto mb-1 
             max-w-[552px] w-full text-xs"
         >
             <h3 className="mr-3 font-bold opacity-50">FILTER</h3>
