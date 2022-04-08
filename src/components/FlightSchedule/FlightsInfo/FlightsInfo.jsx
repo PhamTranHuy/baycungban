@@ -8,7 +8,7 @@ function FlightsInfo() {
                 <Filter />
                 <Flight />
             </div>
-            <div className="basis-[28%]"></div>
+            <div className="basis-1/5"></div>
         </div>
     )
 }

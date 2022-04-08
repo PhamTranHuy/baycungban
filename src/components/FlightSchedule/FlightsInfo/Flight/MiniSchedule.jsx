@@ -2,7 +2,7 @@
 function MiniSchedule() {
     return (
         <div className="flex items-center">
-            <div className="font-bold">
+            <div className="font-semibold">
                 <div className="mb-1">21:40</div>
                 <div className="text-[10px] bg-[#eeedff] rounded-[100px]">DAD</div>
             </div>
@@ -15,7 +15,7 @@ function MiniSchedule() {
                 </div>
                 <div className="text-xs">Direct</div>
             </div>
-            <div className="font-bold">
+            <div className="font-semibold">
                 <div className="mb-1">23:10</div>
                 <div className="text-[10px] bg-[#eeedff] rounded-[100px]">DAD</div>
             </div>

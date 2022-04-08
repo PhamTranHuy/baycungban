@@ -4,7 +4,7 @@ import FlightSchedule from "./FlightSchedule/FlightSchedule"
 
 function SearchFlights() {
     return (
-        <div className="absolute bottom-[12%] left-[10%] right-[10%] 
+        <div className="absolute bottom-[12%] right-0 left-0
             home-max-w px-8 pt-8 pb-12 m-auto
             bg-white rounded-xl"
             style={{boxShadow: '0px 4px 30px rgba(77, 70, 250, 0.1)'}}>

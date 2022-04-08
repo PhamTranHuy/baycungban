@@ -5,7 +5,7 @@ import NavigationBar from './NavigationBar'
 function Header() {
     const location = useLocation();
     return (
-        <div className={clsx("w-full", 
+        <div className={clsx("w-full z-10", 
             location.pathname !== '/home' ? "py-6 bg-[#4D46FA] text-white" : "absolute py-10 bg-transparent text-black")}>
             <div className="home-max-w m-auto flex justify-between w-full">
                 <div className="flex text-2xl leading-10 font-bold">
@@ -21,7 +21,7 @@ function Header() {
                 </div>
                 <NavigationBar />
                 <button className={clsx(
-                    "py-2.5 px-4 rounded-xl bg-[#4D46FA] text-white font-semibold",
+                    "py-2.5 px-4 rounded-xl bg-[#4D46FA] text-white font-semibold text-sm",
                     location.pathname !== '/home' ? "bg-white text-[#4D46FA]" : "bg-[#4D46FA] text-white"
                 )}>Booking now</button>
             </div>
