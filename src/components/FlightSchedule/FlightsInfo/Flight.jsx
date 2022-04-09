@@ -1,6 +1,9 @@
 import React from 'react'
 import MiniSchedule from './Flight/MiniSchedule'
 
+export const formatPrice = (price) => {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 const AIRLINES_NAME = {
     'VJ': 'VIETJET AIR',
     'VN': 'VIETNAM AIRLINE',
@@ -8,14 +11,15 @@ const AIRLINES_NAME = {
 }
 function Flight({ flight, onChoose }) {
     const getPrice = () => {
-        const formatPrice = (price) => {
-            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
         const price = flight.ChargeAdult + flight.ChargeChild + flight.ChargeInfant +
             flight.FeeAdult + flight.FeeChild + flight.FeeInfant +
             flight.PriceAdult + flight.PriceChild + flight.PriceInfant +
             flight.TaxAdult + flight.TaxChild + flight.TaxInfant;
-        return `${formatPrice(Math.round(price/1000)*1000)} vnd`;
+        const roundPrice = Math.round(price/1000)*1000;
+        //add total price to convenient to show another component
+        flight.TotalPrice = roundPrice;
+
+        return `${formatPrice(roundPrice)} vnd`;
     }
 
     return (
