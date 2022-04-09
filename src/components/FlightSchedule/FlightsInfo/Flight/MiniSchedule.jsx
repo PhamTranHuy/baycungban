@@ -1,17 +1,17 @@
+export const format24HourTime = (time) => {
+    const date = new Date(time)
+    return date.toLocaleString('en-US', {hour: '2-digit', minute: '2-digit', hour12: false})
+}
+export const toHoursAndMinutes = (totalMinutes) => {
+    const padTo2Digits = (num) => {
+        return num.toString().padStart(2, '0');
+    }
+    const minutes = totalMinutes % 60;
+    const hours = Math.floor(totalMinutes / 60);
+    return `${hours}h ${padTo2Digits(minutes)}m`;
+}
 
 function MiniSchedule({ startTime, endTime, startPoint, endPoint, duration }) {
-    const format24HourTime = (time) => {
-        const date = new Date(time)
-        return date.toLocaleString('en-US', {hour: '2-digit', minute: '2-digit', hour12: false})
-    }
-    const toHoursAndMinutes = (totalMinutes) => {
-        const padTo2Digits = (num) => {
-            return num.toString().padStart(2, '0');
-        }
-        const minutes = totalMinutes % 60;
-        const hours = Math.floor(totalMinutes / 60);
-        return `${hours}h ${padTo2Digits(minutes)}m`;
-    }
     return (
         <div className="flex items-center">
             <div className="font-semibold">

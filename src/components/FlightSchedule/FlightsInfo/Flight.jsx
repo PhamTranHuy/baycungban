@@ -1,4 +1,6 @@
-import React from 'react'
+import clsx from 'clsx';
+import { useState } from 'react'
+import FlightDetail from './Flight/FlightDetail';
 import MiniSchedule from './Flight/MiniSchedule'
 
 export const formatPrice = (price) => {
@@ -10,6 +12,10 @@ const AIRLINES_NAME = {
     'QH': 'BAMBOO AIRWAYS'
 }
 function Flight({ flight, onChoose }) {
+    const [flightDetail, setFlightDetail] = useState(false);
+    const toggleFlightDetail = () => {
+        setFlightDetail((state) => !state);
+    }
     const getPrice = () => {
         const price = flight.ChargeAdult + flight.ChargeChild + flight.ChargeInfant +
             flight.FeeAdult + flight.FeeChild + flight.FeeInfant +
@@ -55,8 +61,13 @@ function Flight({ flight, onChoose }) {
                 hover:text-white hover:bg-[#F06336]" onClick={() => {onChoose(flight)}}>Choose</button>
             </div>
             <div className="flex mt-7 text-xs font-semibold text-grey">
-                <div className="hover:text-purple hover:underline underline-offset-4">FLIGHT DETAIL</div>
+                <div className={clsx("hover:text-purple hover:underline underline-offset-4",
+                    flightDetail && "text-purple underline underline-offset-4"
+                    )} onClick={toggleFlightDetail}>FLIGHT DETAIL</div>
                 <div className="ml-7 hover:text-purple hover:underline underline-offset-4">FARE INFO</div>
+            </div>
+            <div className={clsx(!flightDetail && "hidden")}>
+                <FlightDetail flight={flight} />
             </div>
         </div>
     )
