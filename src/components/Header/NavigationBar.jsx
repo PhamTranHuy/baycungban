@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 function NavigationBar() {
     return (
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center text-sm">
             <button className="mx-4 font-semibold">Promotion</button>
             <NavLink to="/flight-schedule" className={({ isActive }) => (clsx(`mx-4 py-2 px-4 rounded-[100px]
                 font-semibold 

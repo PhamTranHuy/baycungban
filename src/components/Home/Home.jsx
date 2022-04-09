@@ -6,18 +6,20 @@ function Home() {
             backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/home/background-img.png"})`,
             backgroundSize: "100% 82%"
         }}>
-            <div className="absolute bottom-1/2 left-[10%] 
-                home-max-w m-auto text-left text-7xl font-light">
-                <h1 className="a">Hello!</h1>
-                <h1 className="a">Where are</h1>
-                <h1 className="a">
-                    you <span className="text-[#4D46FA] font-semibold">flying</span> to ...
-                </h1>
+            <div className="relative m-auto home-max-w h-full">
+                <div className="absolute bottom-1/2
+                    m-auto text-left text-7xl font-light">
+                    <h1>Hello!</h1>
+                    <h1>Where are</h1>
+                    <h1>
+                        you <span className="text-[#4D46FA] font-semibold">flying</span> to ...
+                    </h1>
+                </div>
+                <SearchFlights />
+                <div className="fixed -z-10
+                    h-[150px] top-[86%] right-0 left-[20%]
+                    h-full bg-[#F4F2F9]" />
             </div>
-            <SearchFlights />
-            <div className="fixed -z-10
-                h-[150px] top-[86%] right-0 left-[20%]
-                h-full bg-[#F4F2F9]" />
         </div>
     )
 }

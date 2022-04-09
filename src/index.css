@@ -22,7 +22,7 @@ code {
   .flex-center {
     @apply flex justify-center items-center;
   }
-  .home-max-w {
-    @apply max-w-[80%]
+  .home-max-w, .flight-schedule-max-w {
+    @apply max-w-[1170px]
   }
 }
