@@ -1,7 +1,7 @@
 import Date from "./Date"
 import Location from "./Location"
 
-function FlightSchedule() {
+function Schedule() {
     return (
         <div className="flex-center pt-5">
             <Location />
@@ -10,4 +10,4 @@ function FlightSchedule() {
     )
 }
 
-export default FlightSchedule
+export default Schedule

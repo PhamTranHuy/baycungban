@@ -7,6 +7,7 @@ const FLIGHTS_API = "https://mocki.io/v1/ff3207e0-f250-4a1d-9240-b3dbffa8386a";
 function FlightSchedule() {
     const [data, setData] = useState(null);
     useEffect(() => {
+        console.log('useEffect')
         const getFlights = async () => {
             try {
                 const response = await axios.get(FLIGHTS_API);

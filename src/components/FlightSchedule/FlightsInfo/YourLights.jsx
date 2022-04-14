@@ -1,11 +1,18 @@
 import { useLayoutEffect, useState } from "react"
 import { formatPrice } from "./Flight";
+
 const LOCATION_CODE = {
     'SGN': 'Ho Chi Minh',
     'HPH': 'Hai Phong'
 }
+
 function YourLights({ choseLights }) {
     const [subtotal, setSubtotal] = useState(0);
+
+    const formatDate = (startTime) => {
+        const date = new Date(startTime)
+        return date.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) 
+    }
     
     useLayoutEffect(() => {
         const subtotal = choseLights.reduce((a, b) => {
@@ -15,10 +22,7 @@ function YourLights({ choseLights }) {
         }, 0);
         setSubtotal(subtotal);
     }, [choseLights])
-    const formatDate = (startTime) => {
-        const date = new Date(startTime)
-        return date.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) 
-    }
+
     return (
         <div className="ml-2 pt-4 bg-white rounded-xl text-sm overflow-hidden">
             <div className="text-left border-b">

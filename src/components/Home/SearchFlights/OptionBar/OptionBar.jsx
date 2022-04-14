@@ -1,6 +1,6 @@
 import FlightTypesRadioForm from "./FlightTypesRadioForm/FlightTypesRadioForm"
 
-function FlightOptionBar() {
+function OptionBar() {
     return (
         <div className="flex items-center text-sm font-bold whitespace-pre">
         <FlightTypesRadioForm />
@@ -17,4 +17,4 @@ function FlightOptionBar() {
     )
 }
 
-export default FlightOptionBar
+export default OptionBar

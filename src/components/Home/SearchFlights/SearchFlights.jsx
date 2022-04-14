@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
-import FlightOptionBar from "./FlightOptionBar/FlightOptionBar"
-import FlightSchedule from "./FlightSchedule/FlightSchedule"
+import OptionBar from "./OptionBar/OptionBar"
+import Schedule from "./Schedule/Schedule"
 
 function SearchFlights() {
     return (
@@ -8,8 +8,8 @@ function SearchFlights() {
             home-max-w px-8 pt-8 pb-12 m-auto
             bg-white rounded-xl"
             style={{boxShadow: '0px 4px 30px rgba(77, 70, 250, 0.1)'}}>
-            <FlightOptionBar />
-            <FlightSchedule />
+            <OptionBar />
+            <Schedule />
             <NavLink to="/flight-schedule" className="absolute bottom-[-30px] right-[30px]
                 flex justify-between items-center
                 w-[245px] h-[60px] px-5 rounded-xl
